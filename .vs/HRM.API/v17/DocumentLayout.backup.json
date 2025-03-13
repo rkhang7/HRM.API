@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\SourceCode\\THL\\Training\\HRM.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DB2CF4C1-05F0-4A22-8BF8-0DAA630750DA}|HRM.API\\HRM.API.csproj|d:\\sourcecode\\thl\\training\\hrm.api\\hrm.api\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB2CF4C1-05F0-4A22-8BF8-0DAA630750DA}|HRM.API\\HRM.API.csproj|solutionrelative:hrm.api\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB2CF4C1-05F0-4A22-8BF8-0DAA630750DA}|HRM.API\\HRM.API.csproj|d:\\sourcecode\\thl\\training\\hrm.api\\hrm.api\\mappers\\mastermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB2CF4C1-05F0-4A22-8BF8-0DAA630750DA}|HRM.API\\HRM.API.csproj|solutionrelative:hrm.api\\mappers\\mastermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB2CF4C1-05F0-4A22-8BF8-0DAA630750DA}|HRM.API\\HRM.API.csproj|d:\\sourcecode\\thl\\training\\hrm.api\\hrm.api\\application\\handlers\\role\\updaterolehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB2CF4C1-05F0-4A22-8BF8-0DAA630750DA}|HRM.API\\HRM.API.csproj|solutionrelative:hrm.api\\application\\handlers\\role\\updaterolehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB2CF4C1-05F0-4A22-8BF8-0DAA630750DA}|HRM.API\\HRM.API.csproj|d:\\sourcecode\\thl\\training\\hrm.api\\hrm.api\\application\\handlers\\commom\\updatecommomhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB2CF4C1-05F0-4A22-8BF8-0DAA630750DA}|HRM.API\\HRM.API.csproj|solutionrelative:hrm.api\\application\\handlers\\commom\\updatecommomhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB2CF4C1-05F0-4A22-8BF8-0DAA630750DA}|HRM.API\\HRM.API.csproj|d:\\sourcecode\\thl\\training\\hrm.api\\hrm.api\\application\\handlers\\role\\createrolehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB2CF4C1-05F0-4A22-8BF8-0DAA630750DA}|HRM.API\\HRM.API.csproj|solutionrelative:hrm.api\\application\\handlers\\role\\createrolehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB2CF4C1-05F0-4A22-8BF8-0DAA630750DA}|HRM.API\\HRM.API.csproj|d:\\sourcecode\\thl\\training\\hrm.api\\hrm.api\\domain\\dtos\\role\\updateroledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB2CF4C1-05F0-4A22-8BF8-0DAA630750DA}|HRM.API\\HRM.API.csproj|solutionrelative:hrm.api\\domain\\dtos\\role\\updateroledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RoleController.cs",
+              "DocumentMoniker": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\Controllers\\RoleController.cs",
+              "RelativeDocumentMoniker": "HRM.API\\Controllers\\RoleController.cs",
+              "ToolTip": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\Controllers\\RoleController.cs",
+              "RelativeToolTip": "HRM.API\\Controllers\\RoleController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T08:13:51.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MasterMapper.cs",
+              "DocumentMoniker": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\Mappers\\MasterMapper.cs",
+              "RelativeDocumentMoniker": "HRM.API\\Mappers\\MasterMapper.cs",
+              "ToolTip": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\Mappers\\MasterMapper.cs",
+              "RelativeToolTip": "HRM.API\\Mappers\\MasterMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T08:13:29.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CreateRoleHandler.cs",
+              "DocumentMoniker": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\Application\\Handlers\\Role\\CreateRoleHandler.cs",
+              "RelativeDocumentMoniker": "HRM.API\\Application\\Handlers\\Role\\CreateRoleHandler.cs",
+              "ToolTip": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\Application\\Handlers\\Role\\CreateRoleHandler.cs",
+              "RelativeToolTip": "HRM.API\\Application\\Handlers\\Role\\CreateRoleHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T08:10:46.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UpdateCommomHandler.cs",
+              "DocumentMoniker": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\Application\\Handlers\\Commom\\UpdateCommomHandler.cs",
+              "RelativeDocumentMoniker": "HRM.API\\Application\\Handlers\\Commom\\UpdateCommomHandler.cs",
+              "ToolTip": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\Application\\Handlers\\Commom\\UpdateCommomHandler.cs",
+              "RelativeToolTip": "HRM.API\\Application\\Handlers\\Commom\\UpdateCommomHandler.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T08:10:26.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UpdateRoleHandler.cs",
+              "DocumentMoniker": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\Application\\Handlers\\Role\\UpdateRoleHandler.cs",
+              "RelativeDocumentMoniker": "HRM.API\\Application\\Handlers\\Role\\UpdateRoleHandler.cs",
+              "ToolTip": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\Application\\Handlers\\Role\\UpdateRoleHandler.cs",
+              "RelativeToolTip": "HRM.API\\Application\\Handlers\\Role\\UpdateRoleHandler.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA1wB4AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T08:09:57.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UpdateRoleDTO.cs",
+              "DocumentMoniker": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\Domain\\DTOs\\Role\\UpdateRoleDTO.cs",
+              "RelativeDocumentMoniker": "HRM.API\\Domain\\DTOs\\Role\\UpdateRoleDTO.cs",
+              "ToolTip": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\Domain\\DTOs\\Role\\UpdateRoleDTO.cs",
+              "RelativeToolTip": "HRM.API\\Domain\\DTOs\\Role\\UpdateRoleDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T08:08:52.444Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

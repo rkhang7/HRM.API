@@ -1,0 +1,309 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "HR Management API",
+    "description": "API for managing HR",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/Commom/Create": {
+      "post": {
+        "tags": [
+          "Commom"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCommomDtoMasterCommand"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCommomDtoMasterCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCommomDtoMasterCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCommomDtoMasterCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Commom/Update": {
+      "post": {
+        "tags": [
+          "Commom"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCommomDtoMasterCommand"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCommomDtoMasterCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCommomDtoMasterCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCommomDtoMasterCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Role/Create": {
+      "post": {
+        "tags": [
+          "Role"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRoleDTOMasterCommand"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRoleDTOMasterCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRoleDTOMasterCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRoleDTOMasterCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Role/Update": {
+      "post": {
+        "tags": [
+          "Role"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRoleDTOMasterCommand"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRoleDTOMasterCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRoleDTOMasterCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRoleDTOMasterCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ActionEnum": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "CreateCommomDto": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "groupCode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateCommomDtoMasterCommand": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/CreateCommomDto"
+          },
+          "action": {
+            "$ref": "#/components/schemas/ActionEnum"
+          },
+          "langCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "functionCode": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateRoleDTO": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateRoleDTOMasterCommand": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/CreateRoleDTO"
+          },
+          "action": {
+            "$ref": "#/components/schemas/ActionEnum"
+          },
+          "langCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "functionCode": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateCommomDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateCommomDtoMasterCommand": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/UpdateCommomDto"
+          },
+          "action": {
+            "$ref": "#/components/schemas/ActionEnum"
+          },
+          "langCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "functionCode": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateRoleDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateRoleDTOMasterCommand": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/UpdateRoleDTO"
+          },
+          "action": {
+            "$ref": "#/components/schemas/ActionEnum"
+          },
+          "langCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "functionCode": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

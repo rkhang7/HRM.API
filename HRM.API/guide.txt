@@ -1,0 +1,3 @@
+Remove-Migration
+Add-Migration RecreateRoleTable
+Update-Database

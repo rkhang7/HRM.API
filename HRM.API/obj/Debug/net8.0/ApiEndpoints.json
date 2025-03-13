@@ -1,0 +1,66 @@
+[
+  {
+    "ContainingType": "HRM.API.Controllers.CommomController",
+    "Method": "Create",
+    "RelativePath": "api/Commom/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "query",
+        "Type": "HRM.API.Application.Commands.MasterCommand\u00601[[HRM.API.Domain.DTOs.CreateCommomDto.CreateCommomDto, HRM.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRM.API.Controllers.CommomController",
+    "Method": "Update",
+    "RelativePath": "api/Commom/Update",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "query",
+        "Type": "HRM.API.Application.Commands.MasterCommand\u00601[[HRM.API.Domain.DTOs.Commom.UpdateCommomDto, HRM.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRM.API.Controllers.RoleController",
+    "Method": "Create",
+    "RelativePath": "api/Role/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "query",
+        "Type": "HRM.API.Application.Commands.MasterCommand\u00601[[HRM.API.Domain.DTOs.Role.CreateRoleDTO, HRM.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRM.API.Controllers.RoleController",
+    "Method": "Update",
+    "RelativePath": "api/Role/Update",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "query",
+        "Type": "HRM.API.Application.Commands.MasterCommand\u00601[[HRM.API.Domain.DTOs.Role.UpdateRoleDTO, HRM.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

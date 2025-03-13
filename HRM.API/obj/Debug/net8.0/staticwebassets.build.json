@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "5GPsE86mhD5JxoFvIV6cbE/vECPo/hvZ35NV9p4qf1I=",
+  "Source": "HRM.API",
+  "BasePath": "_content/HRM.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
