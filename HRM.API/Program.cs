@@ -7,12 +7,8 @@ using Microsoft.OpenApi.Models;
 
 using HRM.API.Infrastructure.Data;
 using HRM.API.Domain.Interfaces;
-using HRM.API.Domain.Entities;
+
 using HRM.API.Infrastructure.Repositories;
-using HRM.API.Application.Commands;
-using HRM.API.Domain.DTOs.CreateCommomDto;
-using HRM.API.Domain.DTOs;
-using MediatR;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -27,6 +23,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<ICommomRepository, CommonRepository>();
 builder.Services.AddScoped<IRoleRepository, RoleRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
 
 
 // Configure MediatR
@@ -42,23 +40,6 @@ builder.Services.AddAutoMapper(typeof(Program));
 
 
 
-// Configure JWT Authentication
-//builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-//    .AddJwtBearer(options =>
-//    {
-//        options.TokenValidationParameters = new TokenValidationParameters
-//        {
-//            ValidateIssuer = true,
-//            ValidateAudience = true,
-//            ValidateLifetime = true,
-//            ValidateIssuerSigningKey = true,
-//            ValidIssuer = builder.Configuration["Jwt:Issuer"],
-//            ValidAudience = builder.Configuration["Jwt:Audience"],
-//            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
-//        };
-//    });
-//builder.Services.AddAuthorization();
-
 // Configure Swagger
 builder.Services.AddSwaggerGen(c =>
 {
@@ -69,28 +50,7 @@ builder.Services.AddSwaggerGen(c =>
         Description = "API for managing HR",
 
     });
-    //c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-    //{
-    //    In = ParameterLocation.Header,
-    //    Description = "Please enter JWT with Bearer into field (e.g., 'Bearer {token}')",
-    //    Name = "Authorization",
-    //    Type = SecuritySchemeType.ApiKey,
-    //    Scheme = "Bearer"
-    //});
-    //c.AddSecurityRequirement(new OpenApiSecurityRequirement
-    //{
-    //    {
-    //        new OpenApiSecurityScheme
-    //        {
-    //            Reference = new OpenApiReference
-    //            {
-    //                Type = ReferenceType.SecurityScheme,
-    //                Id = "Bearer"
-    //            }
-    //        },
-    //        Array.Empty<string>()
-    //    }
-    //});
+
 });
 
 var app = builder.Build();

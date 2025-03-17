@@ -62,5 +62,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRM.API.Controllers.UserController",
+    "Method": "Create",
+    "RelativePath": "api/User/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "query",
+        "Type": "HRM.API.Application.Commands.MasterCommand\u00601[[HRM.API.Domain.DTOs.Users.CreateUserDTO, HRM.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

@@ -148,3 +148,4 @@ D:\SourceCode\THL\Training\HRM.API\HRM.API\obj\Debug\net8.0\refint\HRM.API.dll
 D:\SourceCode\THL\Training\HRM.API\HRM.API\obj\Debug\net8.0\HRM.API.pdb
 D:\SourceCode\THL\Training\HRM.API\HRM.API\obj\Debug\net8.0\HRM.API.genruntimeconfig.cache
 D:\SourceCode\THL\Training\HRM.API\HRM.API\obj\Debug\net8.0\ref\HRM.API.dll
+D:\SourceCode\THL\Training\HRM.API\HRM.API\obj\Debug\net8.0\HRM.API.sourcelink.json

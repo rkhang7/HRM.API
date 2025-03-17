@@ -18,6 +18,17 @@ namespace HRM.API.Infrastructure.Data
                .HasIndex(e => e.Type)
                .IsUnique();
             base.OnModelCreating(modelBuilder);
+
+
+            //modelBuilder.Entity<UserEntity>()
+            //   .HasIndex(e => e.UserName)
+            //   .IsUnique();
+            //base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<UserEntity>()
+                .HasIndex(user => new { user.UserName, user.Email, user.PhoneNumber })
+               .IsUnique();
+            base.OnModelCreating(modelBuilder);
         }
 
         public DbSet<CommomEntity> Commoms { get; set; }
