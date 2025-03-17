@@ -2,6 +2,7 @@
 using HRM.API.Domain.DTOs.CreateCommomDto;
 using HRM.API.Domain.DTOs.Users;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HRM.API.Controllers
@@ -12,7 +13,7 @@ namespace HRM.API.Controllers
         {
 
         }
-
+        [AllowAnonymous]
         [HttpPost("[action]")]
         public async Task<IActionResult> Create([FromBody] MasterCommand<CreateUserDTO> query)
         {
