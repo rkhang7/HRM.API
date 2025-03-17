@@ -34,16 +34,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -67,8 +59,7 @@
               "RelativeToolTip": "HRM.API\\Mappers\\MasterMapper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T08:13:29.154Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T08:13:29.154Z"
             },
             {
               "$type": "Document",
@@ -80,8 +71,7 @@
               "RelativeToolTip": "HRM.API\\Application\\Handlers\\Role\\CreateRoleHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T08:10:46.744Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T08:10:46.744Z"
             },
             {
               "$type": "Document",
@@ -93,8 +83,7 @@
               "RelativeToolTip": "HRM.API\\Application\\Handlers\\Commom\\UpdateCommomHandler.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAQwBUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T08:10:26.035Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T08:10:26.035Z"
             },
             {
               "$type": "Document",
@@ -106,8 +95,7 @@
               "RelativeToolTip": "HRM.API\\Application\\Handlers\\Role\\UpdateRoleHandler.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAA1wB4AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T08:09:57.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T08:09:57.504Z"
             },
             {
               "$type": "Document",
@@ -119,8 +107,7 @@
               "RelativeToolTip": "HRM.API\\Domain\\DTOs\\Role\\UpdateRoleDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T08:08:52.444Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T08:08:52.444Z"
             }
           ]
         }
