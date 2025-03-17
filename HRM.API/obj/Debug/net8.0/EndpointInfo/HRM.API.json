@@ -6,6 +6,42 @@
     "version": "v1"
   },
   "paths": {
+    "/api/Authen/Login": {
+      "post": {
+        "tags": [
+          "Authen"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDTOMasterQuery"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDTOMasterQuery"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDTOMasterQuery"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDTOMasterQuery"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Commom/Create": {
       "post": {
         "tags": [
@@ -195,22 +231,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/GetByUserNameUserDTOMasterCommand"
+                "$ref": "#/components/schemas/GetByUserNameUserDTOMasterQuery"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/GetByUserNameUserDTOMasterCommand"
+                "$ref": "#/components/schemas/GetByUserNameUserDTOMasterQuery"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/GetByUserNameUserDTOMasterCommand"
+                "$ref": "#/components/schemas/GetByUserNameUserDTOMasterQuery"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/GetByUserNameUserDTOMasterCommand"
+                "$ref": "#/components/schemas/GetByUserNameUserDTOMasterQuery"
               }
             }
           }
@@ -395,11 +431,45 @@
         },
         "additionalProperties": false
       },
-      "GetByUserNameUserDTOMasterCommand": {
+      "GetByUserNameUserDTOMasterQuery": {
         "type": "object",
         "properties": {
           "data": {
             "$ref": "#/components/schemas/GetByUserNameUserDTO"
+          },
+          "action": {
+            "$ref": "#/components/schemas/ActionEnum"
+          },
+          "langCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "functionCode": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginDTO": {
+        "type": "object",
+        "properties": {
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginDTOMasterQuery": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/LoginDTO"
           },
           "action": {
             "$ref": "#/components/schemas/ActionEnum"

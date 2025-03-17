@@ -5,5 +5,7 @@
         public static string Default = "An error occurred please try again later";
         public static string NotFound = "Can not found";
         public static string Unauthorize = "You do not have access. Please log in again.";
+        public static string WrongUserName = "Wrong user name";
+        public static string WrongPassword = "Wrong password";
     }
 }

@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "HRM.API.Controllers.AuthenController",
+    "Method": "Login",
+    "RelativePath": "api/Authen/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "query",
+        "Type": "HRM.API.Application.Queries.MasterQuery\u00601[[HRM.API.Domain.DTOs.Authen.LoginDTO, HRM.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "HRM.API.Controllers.CommomController",
     "Method": "Create",
     "RelativePath": "api/Commom/Create",
@@ -89,7 +105,7 @@
     "Parameters": [
       {
         "Name": "query",
-        "Type": "HRM.API.Application.Commands.MasterCommand\u00601[[HRM.API.Domain.DTOs.Users.GetByUserNameUserDTO, HRM.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "HRM.API.Application.Queries.MasterQuery\u00601[[HRM.API.Domain.DTOs.Users.GetByUserNameUserDTO, HRM.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": true
       }
     ],

@@ -2,9 +2,7 @@
 using HRM.API.Application.Queries;
 using HRM.API.Domain.DTOs;
 using HRM.API.Domain.DTOs.Users;
-using HRM.API.Domain.Entities;
 using HRM.API.Domain.Interfaces;
-using HRM.API.Utils;
 using HRM.API.Utils.Constants;
 namespace HRM.API.Application.Handlers.User
 {

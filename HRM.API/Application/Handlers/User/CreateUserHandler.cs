@@ -26,12 +26,14 @@ namespace HRM.API.Application.Handlers.User
         private readonly IUserRepository _userRepository;
         private readonly IMapper _mapper;
         private readonly IConfiguration _config;
+        private readonly AuthService _authService;
 
-        public CreateUserHandler(IUserRepository userRepository, IMapper mapper, IConfiguration config)
+        public CreateUserHandler(IUserRepository userRepository, IMapper mapper, IConfiguration config, AuthService authService)
         {
             _userRepository = userRepository;
             _mapper = mapper;
             _config = config;
+            _authService = authService;
         }
         public async Task<ApiResponse<object>> Handle(MasterCommand<CreateUserDTO> request, CancellationToken cancellationToken)
         {
@@ -39,6 +41,7 @@ namespace HRM.API.Application.Handlers.User
             {
 
                 var user = _mapper.Map<UserEntity>(request.Data);
+                user.Password = _authService.HashPassword(user.Password);
                 var result = await _userRepository.Create(user);
 
                 var response = await _userRepository.GetByUserName(result.UserName);
@@ -49,8 +52,8 @@ namespace HRM.API.Application.Handlers.User
                 }
                 else
                 {
-                    response.Password = HashPassword(response.Password);
-                    response.Token = GenerateJwtToken(response);
+                    response.Password = _authService.HashPassword(response.Password);
+                    response.Token = _authService.GenerateJwtToken(response);
                     return ApiResponse<dynamic>.Success(response);
                 }
 
@@ -63,37 +66,6 @@ namespace HRM.API.Application.Handlers.User
             }
         }
 
-        private string GenerateJwtToken(UserEntity user)
-        {
-            var jwtSettings = _config.GetSection("Jwt");
-
-            var claims = new[]
-            {
-            new Claim(JwtRegisteredClaimNames.UniqueName, user.UserName),
-            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-            new Claim("UserId", user.Id.ToString())
-        };
-
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings["Key"]));
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
-            var token = new JwtSecurityToken(
-                issuer: jwtSettings["Issuer"],
-                audience: jwtSettings["Audience"],
-                claims: claims,
-                expires: DateTime.UtcNow.AddHours(1),
-                signingCredentials: creds);
-
-            return new JwtSecurityTokenHandler().WriteToken(token);
-        }
-
-        private string HashPassword(string password)
-        {
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                return Convert.ToBase64String(bytes);
-            }
-        }
+       
     }
 }
