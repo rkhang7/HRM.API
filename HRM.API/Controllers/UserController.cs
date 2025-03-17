@@ -20,5 +20,13 @@ namespace HRM.API.Controllers
             var commom = await _mediator.Send(query);
             return Ok(commom);
         }
+
+    
+        [HttpPost("[action]")]
+        public async Task<IActionResult> GetByUserName([FromBody] MasterCommand<GetByUserNameUserDTO> query)
+        {
+            var commom = await _mediator.Send(query);
+            return Ok(commom);
+        }
     }
 }

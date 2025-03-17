@@ -17,6 +17,7 @@ using System.Security.Cryptography;
 
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
+using HRM.API.Utils.Constants;
 
 namespace HRM.API.Application.Handlers.User
 {
@@ -44,7 +45,7 @@ namespace HRM.API.Application.Handlers.User
               
                 if (response == null)
                 {
-                    return ApiResponse<dynamic>.Error(Constants.messageError);
+                    return ApiResponse<dynamic>.Error(MessageErrorConstants.Default);
                 }
                 else
                 {
