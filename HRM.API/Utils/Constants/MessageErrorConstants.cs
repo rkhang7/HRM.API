@@ -11,6 +11,12 @@ namespace HRM.API.Utils.Constants
         public static string WrongPassword = "Wrong password";
         
     }
+    public class MessageSuccessConstants
+    {
+        public static string Default = "Success";
+    
 
-   
+    }
+
+
 }

@@ -7,7 +7,7 @@ using HRM.API.Domain.Entities;
 
 namespace HRM.API.Mappers
 {
-    public class MasterMapper: Profile
+    public class MasterMapper : Profile
     {
         public MasterMapper()
         {
@@ -16,6 +16,7 @@ namespace HRM.API.Mappers
             CreateMap<CreateRoleDTO, RoleEntity>();
             CreateMap<UpdateRoleDTO, RoleEntity>();
             CreateMap<CreateUserDTO, UserEntity>();
+            CreateMap<UpdateUserDTO, UserEntity>();
         }
     }
 }
