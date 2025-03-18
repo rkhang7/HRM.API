@@ -11,5 +11,7 @@ namespace HRM.API.Application.Commands
 
         public String LangCode { get; set; } = String.Empty;
         public int FunctionCode { get; set; }
+        public string? UserName { get; set; }
+
     }
 }

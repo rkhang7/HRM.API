@@ -42,6 +42,42 @@
         }
       }
     },
+    "/api/Authen/ChangePassword": {
+      "post": {
+        "tags": [
+          "Authen"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordDTOMasterCommand"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordDTOMasterCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordDTOMasterCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordDTOMasterCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Commom/Create": {
       "post": {
         "tags": [
@@ -272,6 +308,44 @@
         "type": "integer",
         "format": "int32"
       },
+      "ChangePasswordDTO": {
+        "type": "object",
+        "properties": {
+          "currentPassword": {
+            "type": "string",
+            "nullable": true
+          },
+          "newPassword": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ChangePasswordDTOMasterCommand": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/ChangePasswordDTO"
+          },
+          "action": {
+            "$ref": "#/components/schemas/ActionEnum"
+          },
+          "langCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "functionCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CreateCommomDto": {
         "type": "object",
         "properties": {
@@ -306,6 +380,10 @@
           "functionCode": {
             "type": "integer",
             "format": "int32"
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -340,6 +418,10 @@
           "functionCode": {
             "type": "integer",
             "format": "int32"
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -417,6 +499,10 @@
           "functionCode": {
             "type": "integer",
             "format": "int32"
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -439,6 +525,10 @@
           },
           "action": {
             "$ref": "#/components/schemas/ActionEnum"
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
           },
           "langCode": {
             "type": "string",
@@ -473,6 +563,10 @@
           },
           "action": {
             "$ref": "#/components/schemas/ActionEnum"
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
           },
           "langCode": {
             "type": "string",
@@ -515,6 +609,10 @@
           "functionCode": {
             "type": "integer",
             "format": "int32"
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -549,6 +647,10 @@
           "functionCode": {
             "type": "integer",
             "format": "int32"
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

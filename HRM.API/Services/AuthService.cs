@@ -9,6 +9,7 @@ using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using BCrypt.Net;
 
 public class AuthService
 {
@@ -27,8 +28,9 @@ public class AuthService
 
         var claims = new[]
         {
-            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-            new Claim("UserId", user.Id.ToString())
+            new Claim(ClaimTypes.Hash, Guid.NewGuid().ToString()),
+            new Claim("UserId", user.Id.ToString()),
+             new Claim(ClaimTypes.Name, user.UserName)
         };
 
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings["Key"]));
@@ -46,10 +48,11 @@ public class AuthService
 
     public string HashPassword(string password)
     {
-        using (SHA256 sha256 = SHA256.Create())
-        {
-            byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-            return Convert.ToBase64String(bytes);
-        }
+        return BCrypt.Net.BCrypt.HashPassword(password);
+    }
+
+    public bool VerifyPassword(string password, string hashedPassword)
+    {
+        return BCrypt.Net.BCrypt.Verify(password, hashedPassword);
     }
 }

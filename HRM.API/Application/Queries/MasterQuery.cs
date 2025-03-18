@@ -8,6 +8,7 @@ namespace HRM.API.Application.Queries
     {
         public T Data { get; set; }
         public ActionEnum Action { get; set; }
+        public string? UserName { get; set; }
 
         public String LangCode { get; set; } = String.Empty;
         public int FunctionCode { get; set; }

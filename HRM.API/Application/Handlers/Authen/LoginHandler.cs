@@ -26,8 +26,9 @@ namespace HRM.API.Application.Handlers.Authen
                 var user = await _userRepository.GetByUserName(request.Data.UserName);
                 if(user != null)
                 {
-               
-                    if(user.Password == _authService.HashPassword(request.Data.Password))
+
+                   
+                    if (_authService.VerifyPassword(request.Data.Password, user.Password))
                     {
                         user.Token = _authService.GenerateJwtToken(user);
                         return ApiResponse<dynamic>.Success(user);

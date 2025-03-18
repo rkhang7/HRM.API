@@ -24,5 +24,11 @@ namespace HRM.API.Infrastructure.Repositories
             var user = await _context.Users.Include(user => user.Role).Include(user => user.Position).FirstOrDefaultAsync(user => user.UserName == userName);
             return user;
         }
+
+        public async Task UpdateUserAsync(UserEntity user)
+        {
+            _context.Users.Update(user);
+            await _context.SaveChangesAsync();
+        }
     }
 }

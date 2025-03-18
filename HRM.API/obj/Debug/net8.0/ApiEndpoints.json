@@ -1,6 +1,22 @@
 [
   {
     "ContainingType": "HRM.API.Controllers.AuthenController",
+    "Method": "ChangePassword",
+    "RelativePath": "api/Authen/ChangePassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "HRM.API.Application.Commands.MasterCommand\u00601[[HRM.API.Domain.DTOs.Authen.ChangePasswordDTO, HRM.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRM.API.Controllers.AuthenController",
     "Method": "Login",
     "RelativePath": "api/Authen/Login",
     "HttpMethod": "POST",
