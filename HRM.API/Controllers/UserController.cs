@@ -29,5 +29,12 @@ namespace HRM.API.Controllers
             var commom = await _mediator.Send(query);
             return Ok(commom);
         }
+
+        [HttpPost("[action]")]
+        public async Task<IActionResult> GetAll([FromBody] MasterQuery<GetAllUserDTO> query)
+        {
+            var commom = await _mediator.Send(query);
+            return Ok(commom);
+        }
     }
 }

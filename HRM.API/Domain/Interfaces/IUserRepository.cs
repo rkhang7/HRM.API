@@ -6,7 +6,7 @@ namespace HRM.API.Domain.Interfaces
     {
         Task<UserEntity> Create(UserEntity user);
         Task<UserEntity?> GetByUserName(string userName);
-
         Task UpdateUserAsync(UserEntity user);
+        Task<List<UserEntity>> GetAllAsync();
     }
 }

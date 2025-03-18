@@ -19,6 +19,11 @@ namespace HRM.API.Infrastructure.Repositories
             return entity;
         }
 
+        public async Task<List<UserEntity>> GetAllAsync()
+        {
+            return await _context.Users.ToListAsync();
+        }
+
         public async Task<UserEntity?> GetByUserName(string userName)
         {
             var user = await _context.Users.Include(user => user.Role).Include(user => user.Position).FirstOrDefaultAsync(user => user.UserName == userName);

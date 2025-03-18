@@ -113,6 +113,22 @@
   },
   {
     "ContainingType": "HRM.API.Controllers.UserController",
+    "Method": "GetAll",
+    "RelativePath": "api/User/GetAll",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "query",
+        "Type": "HRM.API.Application.Queries.MasterQuery\u00601[[HRM.API.Domain.DTOs.Users.GetAllUserDTO, HRM.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRM.API.Controllers.UserController",
     "Method": "GetByUserName",
     "RelativePath": "api/User/GetByUserName",
     "HttpMethod": "POST",
