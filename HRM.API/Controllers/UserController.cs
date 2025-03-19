@@ -44,5 +44,8 @@ namespace HRM.API.Controllers
             var commom = await _mediator.Send(query);
             return Ok(commom);
         }
+
+
+    
     }
 }

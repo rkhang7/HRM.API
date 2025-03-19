@@ -27,25 +27,43 @@ namespace HRM.API.Application.Handlers.User
         private readonly IMapper _mapper;
         private readonly IConfiguration _config;
         private readonly AuthService _authService;
+        private readonly IEmailService _emailService;
 
-        public CreateUserHandler(IUserRepository userRepository, IMapper mapper, IConfiguration config, AuthService authService)
+        public CreateUserHandler(IUserRepository userRepository, IMapper mapper, IConfiguration config, AuthService authService, IEmailService emailService)
         {
             _userRepository = userRepository;
             _mapper = mapper;
             _config = config;
             _authService = authService;
+            _emailService = emailService;
         }
         public async Task<ApiResponse<object>> Handle(MasterCommand<CreateUserDTO> request, CancellationToken cancellationToken)
         {
             try
             {
 
+
+
                 var user = _mapper.Map<UserEntity>(request.Data);
+
+
                 user.Password = _authService.HashPassword(user.Password);
+
+                // Tạo token xác thực
+                var token = Guid.NewGuid().ToString();
+                user.EmailVerificationToken = token;
+                user.EmailVerificationTokenExpires = DateTime.UtcNow.AddHours(24);
+                user.EmailVerified = false;
+
                 var result = await _userRepository.Create(user);
 
+               
+
                 var response = await _userRepository.GetByUserName(result.UserName);
-              
+
+                // Gửi email xác thực
+                await _emailService.SendEmailVerificationAsync(user.Email, token);
+
                 if (response == null)
                 {
                     return ApiResponse<dynamic>.Error(MessageErrorConstants.Default);
@@ -54,7 +72,7 @@ namespace HRM.API.Application.Handlers.User
                 {
                     response.Password = _authService.HashPassword(response.Password);
                     response.Token = _authService.GenerateJwtToken(response);
-                    return ApiResponse<dynamic>.Success(response);
+                    return ApiResponse<dynamic>.Success(response, message: MessageErrorConstants.VerifyEmail);
                 }
 
                    

@@ -78,6 +78,27 @@
         }
       }
     },
+    "/api/Authen/VerifyEmail": {
+      "get": {
+        "tags": [
+          "Authen"
+        ],
+        "parameters": [
+          {
+            "name": "token",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Commom/Create": {
       "post": {
         "tags": [

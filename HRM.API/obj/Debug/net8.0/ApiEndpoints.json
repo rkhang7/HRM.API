@@ -32,6 +32,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "HRM.API.Controllers.AuthenController",
+    "Method": "VerifyEmail",
+    "RelativePath": "api/Authen/VerifyEmail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "HRM.API.Controllers.CommomController",
     "Method": "Create",
     "RelativePath": "api/Commom/Create",

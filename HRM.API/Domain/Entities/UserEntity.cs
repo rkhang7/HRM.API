@@ -19,6 +19,11 @@ namespace HRM.API.Domain.Entities
         [Column(TypeName = "varchar(100)"), Required]
         public string Password { get; set; } = string.Empty;
         public bool? EmailVerified { get; set; }
+        // Thêm thuộc tính mới cho email verification
+        [Column(TypeName = "varchar(100)")]
+        public string? EmailVerificationToken { get; set; }
+
+        public DateTime? EmailVerificationTokenExpires { get; set; }
         public DateTime? DateOfBirth { get; set; }
         [ForeignKey(nameof(Position))]
         public int? PositionCode { get; set; }

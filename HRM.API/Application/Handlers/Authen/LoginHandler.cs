@@ -30,8 +30,16 @@ namespace HRM.API.Application.Handlers.Authen
                    
                     if (_authService.VerifyPassword(request.Data.Password, user.Password))
                     {
-                        user.Token = _authService.GenerateJwtToken(user);
-                        return ApiResponse<dynamic>.Success(user);
+                        if (user.EmailVerified == true)
+                        {
+                            user.Token = _authService.GenerateJwtToken(user);
+                            return ApiResponse<dynamic>.Success(user);
+                        }
+                        else
+                        {
+                            return ApiResponse<dynamic>.Error(MessageErrorConstants.VerifyEmail);
+                        }
+                       
                     }
                     else
                     {

@@ -24,6 +24,12 @@ namespace HRM.API.Infrastructure.Repositories
             return await _context.Users.ToListAsync();
         }
 
+        public async Task<UserEntity?> GetByEmailToken(string token)
+        {
+            var user = await _context.Users.Include(user => user.Role).Include(user => user.Position).FirstOrDefaultAsync(user => user.EmailVerificationToken == token);
+            return user;
+        }
+
         public async Task<UserEntity?> GetByUserName(string userName)
         {
             var user = await _context.Users.Include(user => user.Role).Include(user => user.Position).FirstOrDefaultAsync(user => user.UserName == userName);

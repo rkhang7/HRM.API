@@ -34,6 +34,7 @@ builder.Services.AddScoped<ICommomRepository, CommonRepository>();
 builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<AuthService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
 
 
 // Configure MediatR

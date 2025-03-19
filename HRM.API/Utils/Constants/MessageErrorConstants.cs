@@ -9,7 +9,9 @@ namespace HRM.API.Utils.Constants
         public static string Unauthorize = "You do not have access. Please log in again.";
         public static string WrongUserName = "Wrong user name";
         public static string WrongPassword = "Wrong password";
-        
+        public static string TokenExpired = "Tokens expired";
+        public static string VerifyEmail = "Please verify email";
+
     }
     public class MessageSuccessConstants
     {
