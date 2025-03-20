@@ -60,6 +60,7 @@ namespace HRM.API.Application.Handlers.User
                
 
                 var response = await _userRepository.GetByUserName(result.UserName);
+               
 
                 // Gửi email xác thực
                 await _emailService.SendEmailVerificationAsync(user.Email, token);
@@ -72,7 +73,8 @@ namespace HRM.API.Application.Handlers.User
                 {
                     response.Password = _authService.HashPassword(response.Password);
                     response.Token = _authService.GenerateJwtToken(response);
-                    return ApiResponse<dynamic>.Success(response, message: MessageErrorConstants.VerifyEmail);
+                    var responseDTO = _mapper.Map<UserResponseDTO>(response);
+                    return ApiResponse<dynamic>.Success(responseDTO, message: MessageErrorConstants.VerifyEmail);
                 }
 
                    

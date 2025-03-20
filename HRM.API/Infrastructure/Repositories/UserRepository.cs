@@ -22,7 +22,7 @@ namespace HRM.API.Infrastructure.Repositories
 
         public async Task<List<UserEntity>> GetAllAsync()
         {
-            return await _context.Users.ToListAsync();
+            return await _context.Users.Include(user => user.Role).Include(user => user.Position).ToListAsync();
         }
 
         public async Task<UserEntity?> GetByEmail(string email)

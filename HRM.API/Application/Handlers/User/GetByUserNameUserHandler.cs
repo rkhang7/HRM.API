@@ -21,16 +21,18 @@ namespace HRM.API.Application.Handlers.User
         {
             try
             {
-                var result = await _userRepository.GetByUserName(request.Data.UserName);
+                var user = await _userRepository.GetByUserName(request.Data.UserName);
 
-                if (result == null)
+                var userDTO = _mapper.Map<UserResponseDTO>(user);
+
+                if (user == null)
                 {
                     return ApiResponse<dynamic>.Error(MessageErrorConstants.NotFound);
                 }
                 else
                 {
            
-                    return ApiResponse<dynamic>.Success(result);
+                    return ApiResponse<dynamic>.Success(userDTO);
                 }
 
 

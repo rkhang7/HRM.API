@@ -13,10 +13,18 @@ namespace HRM.API.Mappers
         {
             CreateMap<CreateCommomDto, CommomEntity>();
             CreateMap<UpdateCommomDto, CommomEntity>();
+            CreateMap<CommomEntity, CommomResponseDTO>();
+
+            // Role
             CreateMap<CreateRoleDTO, RoleEntity>();
             CreateMap<UpdateRoleDTO, RoleEntity>();
+            CreateMap<RoleEntity, RoleResponseDTO>();
+
+
+            // user
             CreateMap<CreateUserDTO, UserEntity>();
             CreateMap<UpdateUserDTO, UserEntity>();
+            CreateMap<UserEntity, UserResponseDTO>();
         }
     }
 }
