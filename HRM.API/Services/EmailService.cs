@@ -47,5 +47,33 @@ public class EmailService : IEmailService
         await smtpClient.SendMailAsync(message);
     }
 
-    
+    public async Task SendEmailForgotPasswordAsync(string email, string password)
+    {
+        var smtpHost = _configuration["EmailSettings:SmtpHost"];
+        var smtpPort = int.Parse(_configuration["EmailSettings:SmtpPort"]);
+        var smtpUsername = _configuration["EmailSettings:Username"];
+        var smtpPassword = _configuration["EmailSettings:Password"];
+        var fromEmail = _configuration["EmailSettings:FromEmail"];
+
+        string emailBody = $"Mật khẩu mới của bạn là: <b>{password}</b>. Vui lòng đổi mật khẩu sau khi đăng nhập.";
+
+        var message = new MailMessage
+        {
+            From = new MailAddress(fromEmail),
+            Subject = "Thay đổi mật khẩu",
+            IsBodyHtml = true,
+            Body = $@"
+                <h2>Mật khẩu mới</h2>
+                <p>{emailBody}.</p>"
+        };
+        message.To.Add(email);
+
+        using var smtpClient = new SmtpClient(smtpHost, smtpPort)
+        {
+            Credentials = new NetworkCredential(smtpUsername, smtpPassword),
+            EnableSsl = true
+        };
+
+        await smtpClient.SendMailAsync(message);
+    }
 }

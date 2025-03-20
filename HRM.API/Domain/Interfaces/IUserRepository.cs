@@ -9,5 +9,7 @@ namespace HRM.API.Domain.Interfaces
         Task UpdateUserAsync(UserEntity user);
         Task<List<UserEntity>> GetAllAsync();
         Task<UserEntity?> GetByEmailToken(string token);
+
+        Task<UserEntity?> GetByEmail(string email);
     }
 }

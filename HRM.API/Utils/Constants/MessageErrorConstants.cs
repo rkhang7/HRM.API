@@ -16,7 +16,9 @@ namespace HRM.API.Utils.Constants
     public class MessageSuccessConstants
     {
         public static string Default = "Success";
-    
+        public static string ForgotEmailSuccess = "A new password has been sent to your email.";
+
+
 
     }
 

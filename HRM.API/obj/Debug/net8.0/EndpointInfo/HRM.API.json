@@ -99,6 +99,42 @@
         }
       }
     },
+    "/api/Authen/ForgotPassword": {
+      "post": {
+        "tags": [
+          "Authen"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ForgotPasswordDTOMasterCommand"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ForgotPasswordDTOMasterCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ForgotPasswordDTOMasterCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ForgotPasswordDTOMasterCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Commom/Create": {
       "post": {
         "tags": [
@@ -581,6 +617,40 @@
         "properties": {
           "data": {
             "$ref": "#/components/schemas/CreateUserDTO"
+          },
+          "action": {
+            "$ref": "#/components/schemas/ActionEnum"
+          },
+          "langCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "functionCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ForgotPasswordDTO": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ForgotPasswordDTOMasterCommand": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/ForgotPasswordDTO"
           },
           "action": {
             "$ref": "#/components/schemas/ActionEnum"

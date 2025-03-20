@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HRM.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+742999034eab617b4b80045fbc6d021a5723c163")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+43b0e704744aa08d0d02b1293c72ba2485dd37dd")]
 [assembly: System.Reflection.AssemblyProductAttribute("HRM.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HRM.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

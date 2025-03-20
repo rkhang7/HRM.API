@@ -11,7 +11,7 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace HRM.API.Controllers
 {
-    public class AuthenController: MasterController
+    public class AuthenController : MasterController
     {
         public AuthenController(IMediator mediator) : base(mediator)
         {
@@ -23,7 +23,7 @@ namespace HRM.API.Controllers
         public async Task<IActionResult> Login([FromBody] MasterQuery<LoginDTO> query)
         {
             var result = await _mediator.Send(query);
-          
+
             return Ok(result);
         }
         [HttpPost("[action]")]
@@ -41,6 +41,14 @@ namespace HRM.API.Controllers
         {
             var command = new VerifyEmailCommand();
             command.Token = token;
+            var result = await _mediator.Send(command);
+            return Ok(result);
+        }
+
+        [HttpPost("[action]")]
+        [AllowAnonymous]
+        public async Task<IActionResult> ForgotPassword([FromBody] MasterCommand<ForgotPasswordDTO> command)
+        {
             var result = await _mediator.Send(command);
             return Ok(result);
         }

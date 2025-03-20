@@ -2,6 +2,7 @@
 using HRM.API.Domain.Interfaces;
 using HRM.API.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Linq;
 
 namespace HRM.API.Infrastructure.Repositories
 {
@@ -22,6 +23,12 @@ namespace HRM.API.Infrastructure.Repositories
         public async Task<List<UserEntity>> GetAllAsync()
         {
             return await _context.Users.ToListAsync();
+        }
+
+        public async Task<UserEntity?> GetByEmail(string email)
+        {
+            var user = await _context.Users.Include(user => user.Role).Include(user => user.Position).FirstOrDefaultAsync(user => user.Email == email);
+            return user;
         }
 
         public async Task<UserEntity?> GetByEmailToken(string token)
