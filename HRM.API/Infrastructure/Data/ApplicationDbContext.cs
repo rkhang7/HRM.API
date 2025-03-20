@@ -35,6 +35,8 @@ namespace HRM.API.Infrastructure.Data
         public DbSet<RoleEntity> Role { get; set; }
         public DbSet<UserEntity> Users { get; set; }
 
+        public DbSet<LogEntity> Logs { get; set; }
+
 
 
         public override int SaveChanges()

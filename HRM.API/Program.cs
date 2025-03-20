@@ -12,10 +12,15 @@ using HRM.API.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.Text;
 using System.Text.Json;
+using HRM.API.Middlewares;
+using HRM.API.Domain.DTOs;
 
 
 
 var builder = WebApplication.CreateBuilder(args);
+var Connectonstring = builder.Configuration.GetSection(new ConnectionStrings().GetType().Name);
+builder.Services.Configure<ConnectionStrings>(Connectonstring);
+
 
 // Add services to the container
 builder.Services.AddControllers();
@@ -120,7 +125,12 @@ if (app.Environment.IsDevelopment())
     });
 }
 // Thêm Middleware tùy chỉnh 401
+
 app.UseUnauthorizedMiddleware();
+app.UseRequestLoggingMiddleware();
+
+
+
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
