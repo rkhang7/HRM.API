@@ -53,5 +53,13 @@ namespace HRM.API.Controllers
             return Ok(result);
         }
 
+        [HttpPost("[action]")]
+        [AllowAnonymous]
+        public async Task<IActionResult> RefreshToken([FromBody] MasterCommand<RefreshTokenDTO> command)
+        {
+            var result = await _mediator.Send(command);
+            return Ok(result);
+        }
+
     }
 }

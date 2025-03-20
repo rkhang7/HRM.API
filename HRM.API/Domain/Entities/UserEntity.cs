@@ -26,7 +26,7 @@ namespace HRM.API.Domain.Entities
         public DateTime? EmailVerificationTokenExpires { get; set; }
         public DateTime? DateOfBirth { get; set; }
         [ForeignKey(nameof(Position))]
-        public int? PositionCode { get; set; }
+        public string? PositionCode { get; set; }
         public virtual CommomEntity? Position { get; set; }
 
         [Column(TypeName = "varchar(500)")]
@@ -39,5 +39,6 @@ namespace HRM.API.Domain.Entities
         public DateTime? HireDate { get; set; }
         [Column(TypeName = "varchar(500)")]
         public string Token { get; set; } = string.Empty;
+        public string RefreshToken { get; set; } = string.Empty;
     }
 }

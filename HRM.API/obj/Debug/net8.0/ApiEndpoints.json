@@ -49,6 +49,22 @@
   },
   {
     "ContainingType": "HRM.API.Controllers.AuthenController",
+    "Method": "RefreshToken",
+    "RelativePath": "api/Authen/RefreshToken",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "HRM.API.Application.Commands.MasterCommand\u00601[[HRM.API.Domain.DTOs.Authen.RefreshTokenDTO, HRM.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRM.API.Controllers.AuthenController",
     "Method": "VerifyEmail",
     "RelativePath": "api/Authen/VerifyEmail",
     "HttpMethod": "GET",

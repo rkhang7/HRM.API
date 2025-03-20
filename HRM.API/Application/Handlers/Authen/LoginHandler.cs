@@ -33,6 +33,8 @@ namespace HRM.API.Application.Handlers.Authen
                         if (user.EmailVerified == true)
                         {
                             user.Token = _authService.GenerateJwtToken(user);
+                            var refreshToken = await _authService.SaveRefreshTokenAsync(user);
+                            user.RefreshToken = refreshToken.Token;
                             return ApiResponse<dynamic>.Success(user);
                         }
                         else

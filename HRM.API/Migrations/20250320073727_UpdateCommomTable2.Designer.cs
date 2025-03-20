@@ -4,6 +4,7 @@ using HRM.API.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HRM.API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250320073727_UpdateCommomTable2")]
+    partial class UpdateCommomTable2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -169,13 +172,6 @@ namespace HRM.API.Migrations
                     b.Property<string>("PhoneNumber")
                         .HasColumnType("varchar(50)");
 
-                    b.Property<string>("PositionCode")
-                        .HasColumnType("varchar(12)");
-
-                    b.Property<string>("RefreshToken")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("RoleId")
                         .HasColumnType("int");
 
@@ -192,8 +188,6 @@ namespace HRM.API.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("PositionCode");
-
                     b.HasIndex("RoleId");
 
                     b.HasIndex("UserName", "Email", "PhoneNumber")
@@ -203,71 +197,15 @@ namespace HRM.API.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("RefreshTokenEntity", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("ExpiresAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("RevokedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Token")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("Token")
-                        .IsUnique();
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("RefreshTokens");
-                });
-
             modelBuilder.Entity("HRM.API.Domain.Entities.UserEntity", b =>
                 {
-                    b.HasOne("HRM.API.Domain.Entities.CommomEntity", "Position")
-                        .WithMany("Users")
-                        .HasForeignKey("PositionCode");
-
                     b.HasOne("HRM.API.Domain.Entities.RoleEntity", "Role")
                         .WithMany("Users")
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Position");
-
                     b.Navigation("Role");
-                });
-
-            modelBuilder.Entity("RefreshTokenEntity", b =>
-                {
-                    b.HasOne("HRM.API.Domain.Entities.UserEntity", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("HRM.API.Domain.Entities.CommomEntity", b =>
-                {
-                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("HRM.API.Domain.Entities.RoleEntity", b =>

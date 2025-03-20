@@ -135,6 +135,42 @@
         }
       }
     },
+    "/api/Authen/RefreshToken": {
+      "post": {
+        "tags": [
+          "Authen"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenDTOMasterCommand"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenDTOMasterCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenDTOMasterCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenDTOMasterCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Commom/Create": {
       "post": {
         "tags": [
@@ -588,8 +624,7 @@
             "nullable": true
           },
           "positionCode": {
-            "type": "integer",
-            "format": "int32",
+            "type": "string",
             "nullable": true
           },
           "address": {
@@ -766,6 +801,40 @@
           "functionCode": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RefreshTokenDTO": {
+        "type": "object",
+        "properties": {
+          "refreshToken": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RefreshTokenDTOMasterCommand": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/RefreshTokenDTO"
+          },
+          "action": {
+            "$ref": "#/components/schemas/ActionEnum"
+          },
+          "langCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "functionCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

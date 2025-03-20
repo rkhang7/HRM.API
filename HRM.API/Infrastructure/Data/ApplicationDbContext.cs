@@ -29,13 +29,18 @@ namespace HRM.API.Infrastructure.Data
                 .HasIndex(user => new { user.UserName, user.Email, user.PhoneNumber })
                .IsUnique();
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<RefreshTokenEntity>()
+                .HasIndex(rt => rt.Token)
+                .IsUnique();
         }
 
         public DbSet<CommomEntity> Commoms { get; set; }
         public DbSet<RoleEntity> Role { get; set; }
         public DbSet<UserEntity> Users { get; set; }
-
         public DbSet<LogEntity> Logs { get; set; }
+
+        public DbSet<RefreshTokenEntity> RefreshTokens { get; set; }
 
 
 

@@ -20,7 +20,7 @@ namespace HRM.API.Domain.DTOs.Users
 
         public DateTime? DateOfBirth { get; set; }
 
-        public int? PositionCode { get; set; }
+        public string? PositionCode { get; set; }
 
         public string? Address { get; set; }
 

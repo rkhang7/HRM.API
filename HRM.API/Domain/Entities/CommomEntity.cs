@@ -4,11 +4,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HRM.API.Domain.Entities
 {
-    public class CommomEntity: MasterEntity
+    public class CommomEntity
     {
        
         [Required]
-        
+        [Key]
         [Column(TypeName = "varchar(12)")]
         public string Code { get; set; } = string.Empty;
         [MaxLength(100)]
