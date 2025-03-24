@@ -41,6 +41,7 @@ namespace HRM.API.Infrastructure.Data
         public DbSet<LogEntity> Logs { get; set; }
 
         public DbSet<RefreshTokenEntity> RefreshTokens { get; set; }
+        public DbSet<AttendanceEntity> Attendances { get; set; }
 
 
 

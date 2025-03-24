@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using HRM.API.Domain.DTOs.Attendance;
 using HRM.API.Domain.DTOs.Commom;
 using HRM.API.Domain.DTOs.CreateCommomDto;
 using HRM.API.Domain.DTOs.Role;
@@ -25,6 +26,9 @@ namespace HRM.API.Mappers
             CreateMap<CreateUserDTO, UserEntity>();
             CreateMap<UpdateUserDTO, UserEntity>();
             CreateMap<UserEntity, UserResponseDTO>();
+
+            // attendance
+            CreateMap<CreateAttendanceDTO, AttendanceEntity>();
         }
     }
 }

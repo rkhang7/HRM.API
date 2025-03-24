@@ -1,5 +1,66 @@
 [
   {
+    "ContainingType": "HRM.API.Controllers.AttendanceController",
+    "Method": "Create",
+    "RelativePath": "api/Attendance/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "StatusCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Desciption",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CheckInDescription",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CheckOutDescription",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CheckInFaceImage",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "CheckOutFaceImage",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ip",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Lat",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Long",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "HRM.API.Controllers.AuthenController",
     "Method": "ChangePassword",
     "RelativePath": "api/Authen/ChangePassword",

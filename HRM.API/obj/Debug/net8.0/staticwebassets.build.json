@@ -1,12 +1,434 @@
 {
   "Version": 1,
-  "Hash": "5GPsE86mhD5JxoFvIV6cbE/vECPo/hvZ35NV9p4qf1I=",
+  "Hash": "h7Vrq64XYrIzk4tNxhZirHT+NQLRRLgo4ni3vNncIEM=",
   "Source": "HRM.API",
   "BasePath": "_content/HRM.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "HRM.API\\wwwroot",
+      "Source": "HRM.API",
+      "ContentRoot": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\wwwroot\\",
+      "BasePath": "_content/HRM.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\wwwroot\\faces\\0777ec39-d9f2-4a8e-9f85-282cf587e3c6.png",
+      "SourceId": "HRM.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\wwwroot\\",
+      "BasePath": "_content/HRM.API",
+      "RelativePath": "faces/0777ec39-d9f2-4a8e-9f85-282cf587e3c6#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0h97a1sgsf",
+      "Integrity": "tNnhK8nc85MJ015BTbLY7Iqxk042Eq4OQlbiWlHpIYo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\faces\\0777ec39-d9f2-4a8e-9f85-282cf587e3c6.png"
+    },
+    {
+      "Identity": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\wwwroot\\faces\\14bc4c52-d3ec-4dd7-977b-d6854cf49caf.png",
+      "SourceId": "HRM.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\wwwroot\\",
+      "BasePath": "_content/HRM.API",
+      "RelativePath": "faces/14bc4c52-d3ec-4dd7-977b-d6854cf49caf#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0h97a1sgsf",
+      "Integrity": "tNnhK8nc85MJ015BTbLY7Iqxk042Eq4OQlbiWlHpIYo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\faces\\14bc4c52-d3ec-4dd7-977b-d6854cf49caf.png"
+    },
+    {
+      "Identity": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\wwwroot\\faces\\90468baa-4699-4c2c-8521-36d35a77ab4c.png",
+      "SourceId": "HRM.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\wwwroot\\",
+      "BasePath": "_content/HRM.API",
+      "RelativePath": "faces/90468baa-4699-4c2c-8521-36d35a77ab4c#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0h97a1sgsf",
+      "Integrity": "tNnhK8nc85MJ015BTbLY7Iqxk042Eq4OQlbiWlHpIYo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\faces\\90468baa-4699-4c2c-8521-36d35a77ab4c.png"
+    },
+    {
+      "Identity": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\wwwroot\\faces\\ffc8fc2d-23d2-4c8b-8dad-39933a0687e9.png",
+      "SourceId": "HRM.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\wwwroot\\",
+      "BasePath": "_content/HRM.API",
+      "RelativePath": "faces/ffc8fc2d-23d2-4c8b-8dad-39933a0687e9#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0h97a1sgsf",
+      "Integrity": "tNnhK8nc85MJ015BTbLY7Iqxk042Eq4OQlbiWlHpIYo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\faces\\ffc8fc2d-23d2-4c8b-8dad-39933a0687e9.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "faces/0777ec39-d9f2-4a8e-9f85-282cf587e3c6.0h97a1sgsf.png",
+      "AssetFile": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\wwwroot\\faces\\0777ec39-d9f2-4a8e-9f85-282cf587e3c6.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30273"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tNnhK8nc85MJ015BTbLY7Iqxk042Eq4OQlbiWlHpIYo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 09:55:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0h97a1sgsf"
+        },
+        {
+          "Name": "label",
+          "Value": "faces/0777ec39-d9f2-4a8e-9f85-282cf587e3c6.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tNnhK8nc85MJ015BTbLY7Iqxk042Eq4OQlbiWlHpIYo="
+        }
+      ]
+    },
+    {
+      "Route": "faces/0777ec39-d9f2-4a8e-9f85-282cf587e3c6.png",
+      "AssetFile": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\wwwroot\\faces\\0777ec39-d9f2-4a8e-9f85-282cf587e3c6.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30273"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tNnhK8nc85MJ015BTbLY7Iqxk042Eq4OQlbiWlHpIYo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 09:55:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tNnhK8nc85MJ015BTbLY7Iqxk042Eq4OQlbiWlHpIYo="
+        }
+      ]
+    },
+    {
+      "Route": "faces/14bc4c52-d3ec-4dd7-977b-d6854cf49caf.0h97a1sgsf.png",
+      "AssetFile": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\wwwroot\\faces\\14bc4c52-d3ec-4dd7-977b-d6854cf49caf.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30273"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tNnhK8nc85MJ015BTbLY7Iqxk042Eq4OQlbiWlHpIYo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 10:02:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0h97a1sgsf"
+        },
+        {
+          "Name": "label",
+          "Value": "faces/14bc4c52-d3ec-4dd7-977b-d6854cf49caf.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tNnhK8nc85MJ015BTbLY7Iqxk042Eq4OQlbiWlHpIYo="
+        }
+      ]
+    },
+    {
+      "Route": "faces/14bc4c52-d3ec-4dd7-977b-d6854cf49caf.png",
+      "AssetFile": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\wwwroot\\faces\\14bc4c52-d3ec-4dd7-977b-d6854cf49caf.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30273"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tNnhK8nc85MJ015BTbLY7Iqxk042Eq4OQlbiWlHpIYo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 10:02:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tNnhK8nc85MJ015BTbLY7Iqxk042Eq4OQlbiWlHpIYo="
+        }
+      ]
+    },
+    {
+      "Route": "faces/90468baa-4699-4c2c-8521-36d35a77ab4c.0h97a1sgsf.png",
+      "AssetFile": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\wwwroot\\faces\\90468baa-4699-4c2c-8521-36d35a77ab4c.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30273"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tNnhK8nc85MJ015BTbLY7Iqxk042Eq4OQlbiWlHpIYo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 09:57:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0h97a1sgsf"
+        },
+        {
+          "Name": "label",
+          "Value": "faces/90468baa-4699-4c2c-8521-36d35a77ab4c.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tNnhK8nc85MJ015BTbLY7Iqxk042Eq4OQlbiWlHpIYo="
+        }
+      ]
+    },
+    {
+      "Route": "faces/90468baa-4699-4c2c-8521-36d35a77ab4c.png",
+      "AssetFile": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\wwwroot\\faces\\90468baa-4699-4c2c-8521-36d35a77ab4c.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30273"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tNnhK8nc85MJ015BTbLY7Iqxk042Eq4OQlbiWlHpIYo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 09:57:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tNnhK8nc85MJ015BTbLY7Iqxk042Eq4OQlbiWlHpIYo="
+        }
+      ]
+    },
+    {
+      "Route": "faces/ffc8fc2d-23d2-4c8b-8dad-39933a0687e9.0h97a1sgsf.png",
+      "AssetFile": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\wwwroot\\faces\\ffc8fc2d-23d2-4c8b-8dad-39933a0687e9.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30273"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tNnhK8nc85MJ015BTbLY7Iqxk042Eq4OQlbiWlHpIYo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 09:56:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0h97a1sgsf"
+        },
+        {
+          "Name": "label",
+          "Value": "faces/ffc8fc2d-23d2-4c8b-8dad-39933a0687e9.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tNnhK8nc85MJ015BTbLY7Iqxk042Eq4OQlbiWlHpIYo="
+        }
+      ]
+    },
+    {
+      "Route": "faces/ffc8fc2d-23d2-4c8b-8dad-39933a0687e9.png",
+      "AssetFile": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\wwwroot\\faces\\ffc8fc2d-23d2-4c8b-8dad-39933a0687e9.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30273"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tNnhK8nc85MJ015BTbLY7Iqxk042Eq4OQlbiWlHpIYo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 09:56:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tNnhK8nc85MJ015BTbLY7Iqxk042Eq4OQlbiWlHpIYo="
+        }
+      ]
+    }
+  ]
 }

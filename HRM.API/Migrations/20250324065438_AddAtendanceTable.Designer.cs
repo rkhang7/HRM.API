@@ -4,6 +4,7 @@ using HRM.API.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HRM.API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250324065438_AddAtendanceTable")]
+    partial class AddAtendanceTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -33,10 +36,6 @@ namespace HRM.API.Migrations
                     b.Property<string>("CheckInDescription")
                         .HasColumnType("varchar(500)");
 
-                    b.Property<string>("CheckInFaceUrl")
-                        .IsRequired()
-                        .HasColumnType("varchar(500)");
-
                     b.Property<DateTime?>("CheckInTime")
                         .HasColumnType("datetime2");
 
@@ -46,13 +45,14 @@ namespace HRM.API.Migrations
                     b.Property<DateTime?>("CheckOutTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("CheckoutFaceUrl")
-                        .HasColumnType("varchar(500)");
-
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Desciption")
+                        .HasColumnType("varchar(500)");
+
+                    b.Property<string>("FaceUrl")
+                        .IsRequired()
                         .HasColumnType("varchar(500)");
 
                     b.Property<string>("Ip")

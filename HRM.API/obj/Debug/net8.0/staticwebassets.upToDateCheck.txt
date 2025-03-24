@@ -1,0 +1,4 @@
+wwwroot\faces\0777ec39-d9f2-4a8e-9f85-282cf587e3c6.png
+wwwroot\faces\14bc4c52-d3ec-4dd7-977b-d6854cf49caf.png
+wwwroot\faces\90468baa-4699-4c2c-8521-36d35a77ab4c.png
+wwwroot\faces\ffc8fc2d-23d2-4c8b-8dad-39933a0687e9.png

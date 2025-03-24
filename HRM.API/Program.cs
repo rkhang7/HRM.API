@@ -14,6 +14,7 @@ using System.Text;
 using System.Text.Json;
 using HRM.API.Middlewares;
 using HRM.API.Domain.DTOs;
+using Microsoft.Extensions.FileProviders;
 
 
 
@@ -40,6 +41,7 @@ builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<IAttendanceRepository, AttendanceRepository>();
 
 
 // Configure MediatR
@@ -107,6 +109,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
     });
 
+builder.Services.AddHttpContextAccessor();
+
 var app = builder.Build();
 app.UseCors(x => x
             .AllowAnyOrigin()
@@ -128,7 +132,13 @@ if (app.Environment.IsDevelopment())
 
 app.UseUnauthorizedMiddleware();
 app.UseRequestLoggingMiddleware();
+app.UseStaticFiles(); // Cho phép truy cập wwwroot
 
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "faces")),
+    RequestPath = "/faces"
+});
 
 
 app.UseHttpsRedirection();

@@ -6,6 +6,100 @@
     "version": "v1"
   },
   "paths": {
+    "/api/Attendance/Create": {
+      "post": {
+        "tags": [
+          "Attendance"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "Lat",
+                  "Long"
+                ],
+                "type": "object",
+                "properties": {
+                  "UserId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "StatusCode": {
+                    "type": "string"
+                  },
+                  "Desciption": {
+                    "type": "string"
+                  },
+                  "CheckInDescription": {
+                    "type": "string"
+                  },
+                  "CheckOutDescription": {
+                    "type": "string"
+                  },
+                  "CheckInFaceImage": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "CheckOutFaceImage": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "Ip": {
+                    "type": "string"
+                  },
+                  "Lat": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "Long": {
+                    "type": "number",
+                    "format": "double"
+                  }
+                }
+              },
+              "encoding": {
+                "UserId": {
+                  "style": "form"
+                },
+                "StatusCode": {
+                  "style": "form"
+                },
+                "Desciption": {
+                  "style": "form"
+                },
+                "CheckInDescription": {
+                  "style": "form"
+                },
+                "CheckOutDescription": {
+                  "style": "form"
+                },
+                "CheckInFaceImage": {
+                  "style": "form"
+                },
+                "CheckOutFaceImage": {
+                  "style": "form"
+                },
+                "Ip": {
+                  "style": "form"
+                },
+                "Lat": {
+                  "style": "form"
+                },
+                "Long": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Authen/Login": {
       "post": {
         "tags": [

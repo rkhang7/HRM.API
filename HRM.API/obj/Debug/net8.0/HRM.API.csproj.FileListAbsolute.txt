@@ -150,3 +150,4 @@ D:\SourceCode\THL\Training\HRM.API\HRM.API\obj\Debug\net8.0\HRM.API.genruntimeco
 D:\SourceCode\THL\Training\HRM.API\HRM.API\obj\Debug\net8.0\ref\HRM.API.dll
 D:\SourceCode\THL\Training\HRM.API\HRM.API\obj\Debug\net8.0\HRM.API.sourcelink.json
 D:\SourceCode\THL\Training\HRM.API\HRM.API\bin\Debug\net8.0\BCrypt.Net-Next.dll
+D:\SourceCode\THL\Training\HRM.API\HRM.API\bin\Debug\net8.0\HRM.API.staticwebassets.runtime.json

@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\wwwroot\\faces\\0777ec39-d9f2-4a8e-9f85-282cf587e3c6.png",
+      "PackagePath": "staticwebassets\\faces\\0777ec39-d9f2-4a8e-9f85-282cf587e3c6.png"
+    },
+    {
+      "Id": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\wwwroot\\faces\\14bc4c52-d3ec-4dd7-977b-d6854cf49caf.png",
+      "PackagePath": "staticwebassets\\faces\\14bc4c52-d3ec-4dd7-977b-d6854cf49caf.png"
+    },
+    {
+      "Id": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\wwwroot\\faces\\90468baa-4699-4c2c-8521-36d35a77ab4c.png",
+      "PackagePath": "staticwebassets\\faces\\90468baa-4699-4c2c-8521-36d35a77ab4c.png"
+    },
+    {
+      "Id": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\wwwroot\\faces\\ffc8fc2d-23d2-4c8b-8dad-39933a0687e9.png",
+      "PackagePath": "staticwebassets\\faces\\ffc8fc2d-23d2-4c8b-8dad-39933a0687e9.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.HRM.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.HRM.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.HRM.API.props",
+      "PackagePath": "build\\HRM.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.HRM.API.props",
+      "PackagePath": "buildMultiTargeting\\HRM.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.HRM.API.props",
+      "PackagePath": "buildTransitive\\HRM.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
