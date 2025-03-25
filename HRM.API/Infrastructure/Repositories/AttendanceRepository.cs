@@ -25,5 +25,12 @@ namespace HRM.API.Infrastructure.Repositories
         {
             return await _context.Attendances.ToListAsync();
         }
+
+        public async Task<AttendanceEntity?> UpdateAsync(AttendanceEntity attendance)
+        {
+            var entity = _context.Attendances.Update(attendance).Entity;
+            await _context.SaveChangesAsync();
+            return entity;
+        }
     }
 }

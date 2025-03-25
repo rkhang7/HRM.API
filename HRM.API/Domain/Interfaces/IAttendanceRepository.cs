@@ -6,5 +6,6 @@ namespace HRM.API.Domain.Interfaces
     {
         Task<AttendanceEntity> CreateAsync(AttendanceEntity attendance);
         Task<List<AttendanceEntity>> GetAllAsync();
+        Task<AttendanceEntity?> UpdateAsync(AttendanceEntity attendance);
     }
 }
