@@ -27,26 +27,48 @@ namespace HRM.API.Application.Handlers.Attendance
         {
             
             var attendance = _mapper.Map<AttendanceEntity>(request);
-            attendance.CheckInTime = DateTime.Now;
 
-            string? checkInImageUrl =  request.CheckInFaceImage != null ? await SaveImageAsync(request.CheckInFaceImage) : null;
 
-            if (checkInImageUrl != null)
+            var attendanceToday = await _attendanceRepository.GetAttendanceToday(request.UserId);
+
+            if (attendanceToday != null)
             {
-                attendance.CheckInFaceUrl = checkInImageUrl;
+                // checkout
+                attendanceToday.CheckOutTime = DateTime.Now;
+
+
+                string? checkOutImageUrl = request.CheckOutFaceImage != null ? await SaveImageAsync(request.CheckOutFaceImage) : null;
+
+                if (checkOutImageUrl != null)
+                {
+                    attendanceToday.CheckoutFaceUrl = checkOutImageUrl;
+                }
+
+                await _attendanceRepository.UpdateAsync(attendanceToday);
+
+                return ApiResponse<dynamic>.Success(attendanceToday);
             }
 
-            string? checkOutImageUrl = request.CheckOutFaceImage != null ? await SaveImageAsync(request.CheckOutFaceImage) : null;
-
-            if (checkOutImageUrl != null)
+            else
             {
-                attendance.CheckoutFaceUrl = checkOutImageUrl;
+                attendance.CheckInTime = DateTime.Now;
+
+                string? checkInImageUrl = request.CheckInFaceImage != null ? await SaveImageAsync(request.CheckInFaceImage) : null;
+
+                if (checkInImageUrl != null)
+                {
+                    attendance.CheckInFaceUrl = checkInImageUrl;
+                }
+
+                await _attendanceRepository.CreateAsync(attendance);
+
+                return ApiResponse<dynamic>.Success(attendance);
             }
 
-            await _attendanceRepository.CreateAsync(attendance);
+     
 
 
-            return ApiResponse<dynamic>.Success(attendance);
+           
         }
 
         // Hàm lưu ảnh vào thư mục và trả về URL

@@ -21,9 +21,26 @@ namespace HRM.API.Infrastructure.Repositories
             return entity;
         }
 
+        public async Task<AttendanceEntity?> FindAsync(AttendanceEntity attendance)
+        {
+            var entity = await _context.Attendances.FindAsync(attendance);
+            return entity;
+        }
+
         public async Task<List<AttendanceEntity>> GetAllAsync()
         {
             return await _context.Attendances.ToListAsync();
+        }
+
+        public Task<AttendanceEntity?> GetAttendanceToday(int userId)
+        {
+            var attendance = _context.Attendances
+                .FromSqlRaw("EXEC GetAttendanceToday @p0", userId)
+                .AsEnumerable()
+                .FirstOrDefault();
+
+
+            return Task.FromResult(attendance);
         }
 
         public async Task<AttendanceEntity?> UpdateAsync(AttendanceEntity attendance)

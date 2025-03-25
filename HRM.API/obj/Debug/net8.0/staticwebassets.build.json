@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "f+UEVXB8soPWt6l79SmqW9y5aCi9aUaOI/Ooieg6tik=",
+  "Hash": "RNHWF06viLSoe/TsMhybHLnPnRiLr//BHruoTC5Bq10=",
   "Source": "HRM.API",
   "BasePath": "_content/HRM.API",
   "Mode": "Default",
@@ -78,6 +78,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\faces\\6198f519-e67b-4e7b-8b53-5c7a902f9cfc.png"
+    },
+    {
+      "Identity": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\wwwroot\\faces\\85fc7d63-96e6-476c-b2ef-17b003ef5e43.png",
+      "SourceId": "HRM.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\wwwroot\\",
+      "BasePath": "_content/HRM.API",
+      "RelativePath": "faces/85fc7d63-96e6-476c-b2ef-17b003ef5e43#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0h97a1sgsf",
+      "Integrity": "tNnhK8nc85MJ015BTbLY7Iqxk042Eq4OQlbiWlHpIYo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\faces\\85fc7d63-96e6-476c-b2ef-17b003ef5e43.png"
     },
     {
       "Identity": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\wwwroot\\faces\\90468baa-4699-4c2c-8521-36d35a77ab4c.png",
@@ -356,6 +377,88 @@
         {
           "Name": "Last-Modified",
           "Value": "Mon, 24 Mar 2025 10:02:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tNnhK8nc85MJ015BTbLY7Iqxk042Eq4OQlbiWlHpIYo="
+        }
+      ]
+    },
+    {
+      "Route": "faces/85fc7d63-96e6-476c-b2ef-17b003ef5e43.0h97a1sgsf.png",
+      "AssetFile": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\wwwroot\\faces\\85fc7d63-96e6-476c-b2ef-17b003ef5e43.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30273"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tNnhK8nc85MJ015BTbLY7Iqxk042Eq4OQlbiWlHpIYo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Mar 2025 06:36:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0h97a1sgsf"
+        },
+        {
+          "Name": "label",
+          "Value": "faces/85fc7d63-96e6-476c-b2ef-17b003ef5e43.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tNnhK8nc85MJ015BTbLY7Iqxk042Eq4OQlbiWlHpIYo="
+        }
+      ]
+    },
+    {
+      "Route": "faces/85fc7d63-96e6-476c-b2ef-17b003ef5e43.png",
+      "AssetFile": "D:\\SourceCode\\THL\\Training\\HRM.API\\HRM.API\\wwwroot\\faces\\85fc7d63-96e6-476c-b2ef-17b003ef5e43.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30273"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tNnhK8nc85MJ015BTbLY7Iqxk042Eq4OQlbiWlHpIYo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Mar 2025 06:36:51 GMT"
         },
         {
           "Name": "Cache-Control",
